@@ -1,22 +1,8 @@
 "use client";
-
-import { BorderBeam } from "@/components/magicui/border-beam";
 import { RetroGrid } from "@/components/magicui/retro-grid";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Banner() {
-  const { resolvedTheme } = useTheme();
-  const [color, setColor] = useState("#155DFC");
-
-  useEffect(() => {
-    if (resolvedTheme) {
-      setColor(resolvedTheme === "dark" ? "#155DFC" : "#155DFC");
-    } else {
-      setColor("#155DFC");
-    }
-  }, [resolvedTheme]);
 
   return (
     <section
@@ -35,9 +21,9 @@ export default function Banner() {
           <h2 className="text-xl text-gray-700 dark:text-gray-300 mb-4">
             Junior MERN Stack Developer
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 md:text-lg mb-6">
-            Passionate about building responsive and dynamic web applications.
-            Skilled in React, Firebase, and MongoDB with a strong focus on user
+          <p className="text-gray-600 dark:text-gray-400 text-sm xl:text-lg mb-6">
+            Skilled in building responsive and dynamic web applications with
+            React, Next.Js, Firebase, and MongoDB, with a strong focus on user
             experience. Always eager to learn and explore modern technologies.
           </p>
 
@@ -83,7 +69,6 @@ export default function Banner() {
             className="w-full h-full object-cover border border-slate-100"
             alt="Moshiur Islam"
           />
-          <BorderBeam className="absolute inset-0 z-10" color={color} />
         </div>
       </div>
     </section>

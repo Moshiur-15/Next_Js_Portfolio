@@ -1,23 +1,31 @@
-"use client"; // If you're using Next.js 13+ with App Router
-
+"use client";
+import { BorderBeam } from "@/components/magicui/border-beam";
+import {
+  FaBars,
+  FaTimes,
+  FaFolderOpen,
+  FaHome,
+  FaUser,
+  FaTools,
+  FaProjectDiagram,
+  FaEnvelope,
+} from "react-icons/fa";
 import { useState } from "react";
-import { FaBars, FaTimes, FaFolderOpen } from "react-icons/fa";
 
 const NavBer = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Project", href: "#project" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "#home", icon: <FaHome /> },
+    { name: "About", href: "#about", icon: <FaUser /> },
+    { name: "Skills", href: "#skills", icon: <FaTools /> },
+    { name: "Project", href: "#project", icon: <FaProjectDiagram /> },
+    { name: "Contact", href: "#contact", icon: <FaEnvelope /> },
   ];
 
   return (
     <section className="container mx-auto pb-2">
       <header className="backdrop-blur bg-gray-50/10 rounded-full shadow-md">
-        <div className="flex justify-between items-center mt-2 px-4 py-2 md:py-3 ">
+        <div className="flex justify-between items-center mt-2 px-4 py-2 md:py-3">
           {/* Logo */}
           <div className="flex items-center">
             <img
@@ -27,15 +35,16 @@ const NavBer = () => {
             />
           </div>
 
-          {/* Desktop Links */}
+          {/* Desktop Links with Icons */}
           <nav className="hidden md:flex space-x-8 font-medium text-black">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-blue-600 duration-200"
+                className="flex items-center space-x-2 hover:scale-125  hover:text-blue-600 duration-300"
               >
-                {link.name}
+                {link.icon}
+                <span>{link.name}</span>
               </a>
             ))}
           </nav>
@@ -64,7 +73,7 @@ const NavBer = () => {
           </div>
         </div>
 
-        {/* Mobile Drawer */}
+        {/* Mobile Drawer with Icons */}
         {isOpen && (
           <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-white flex flex-col items-center justify-center space-y-6 text-xl font-medium text-black z-40">
             {navLinks.map((link) => (
@@ -72,9 +81,10 @@ const NavBer = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="hover:text-blue-600 duration-200"
+                className="flex items-center space-x-2 hover:text-blue-600 duration-200"
               >
-                {link.name}
+                {link.icon}
+                <span>{link.name}</span>
               </a>
             ))}
             <a
@@ -88,6 +98,7 @@ const NavBer = () => {
             </a>
           </div>
         )}
+        <BorderBeam className="absolute inset-0 z-10" />
       </header>
     </section>
   );
