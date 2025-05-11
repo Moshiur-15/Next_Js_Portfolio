@@ -13,6 +13,7 @@ import {
   FaGithub,
   FaLocationDot,
 } from "react-icons/fa6";
+import { FlipText } from "@/components/magicui/flip-text";
 
 export default function Contact() {
   const form = useRef();
@@ -43,7 +44,7 @@ export default function Contact() {
     <div className="bg-gray-100 pb-32 lg:pb-20 px-4">
       <div className="sm:py-10 container mx-auto" id="contact">
         <h2 className="text-3xl font-bold uppercase text-gray-700 text-center mb-2">
-          Contact Me
+          <FlipText>Contact Me</FlipText>
         </h2>
         <p className="text-xl text-center mb-6 lg:mb-10">
           Use the contact form below to send me an email

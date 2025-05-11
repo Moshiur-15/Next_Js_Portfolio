@@ -6,7 +6,7 @@ import { FlipText } from "@/components/magicui/flip-text";
 
 const Project = () => {
   return (
-    <div className="py-12 container mx-auto px-4" id="project">
+    <div className="py-12 lg:py-20 container mx-auto px-4" id="project">
       <h2 className="text-3xl font-bold uppercase lg:scale-y-125 text-gray-700 text-center mb-5 lg:mb-15">
         <FlipText>feature Project</FlipText>
       </h2>

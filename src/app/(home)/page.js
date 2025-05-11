@@ -35,8 +35,8 @@ export default function ParticlesPage() {
         <Contact />
         <Particles
           className="absolute inset-0 z-0 min-h-screen"
-          quantity={200}
-          speed={10000}
+          quantity={150}
+          speed={3}
           color={color}
           refresh={true}
         />

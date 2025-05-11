@@ -2,7 +2,7 @@ import { FlipText } from "@/components/magicui/flip-text";
 
 export default function About() {
   return (
-    <div className="sm:py-12 container mx-auto px-4" id="about">
+    <div className="sm:py-12 lg:py-28 container mx-auto px-4" id="about">
       <div className="mx-auto">
         <h2 className="text-3xl font-bold uppercase text-gray-700 text-center mb-8">
           <FlipText>About Me</FlipText>

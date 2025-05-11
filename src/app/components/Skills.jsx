@@ -9,7 +9,7 @@ const Skills = () => {
         <title>My Skills</title>
       </Head>
       
-      <section className="sm:py-12 container mx-auto px-4" id="skills">
+      <section className="sm:py-12 lg:py-28 container mx-auto px-4" id="skills">
         <h2 className="text-3xl font-bold uppercase text-gray-700 text-center mb-12">
           <FlipText>My Skills</FlipText>
         </h2>
@@ -18,7 +18,7 @@ const Skills = () => {
           <div className="bg-white p-6 shadow-lg">
             <h2 className="text-xl font-bold text-gray-700 mb-3">Frontend</h2>
             <ul className="space-y-2 text-gray-700">
-              {["HTML", "CSS", "Tailwind CSS", "JavaScript", "React"].map((skill, index) => (
+              {["HTML", "CSS", "Tailwind CSS", "JavaScript", "React", "Next.Js"].map((skill, index) => (
                 <li key={index} className="flex items-center gap-2">
                   <div className="w-5.5 h-5.5 flex justify-center items-center bg-gray-200 rounded-full">
                     <div className="w-2.5 h-2.5 bg-black rounded-full"></div>
