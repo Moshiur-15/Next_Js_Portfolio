@@ -23,15 +23,19 @@ export default function ParticlesPage() {
   }, [resolvedTheme]);
 
   return (
-    <div className="relative">
-      <div className="sticky z-50 top-0 bg-slate-100">
+    <div className="relative bg-slate-100">
+      <div className="sticky z-50 top-3">
         <NavBer />
       </div>
       <Banner />
       <section className="relative">
-        <About />
+        <div className="bg-white">
+          <About />
+        </div>
         <Skills />
-        <Project />
+        <div className="bg-white">
+          <Project />
+        </div>
         <Contact />
         <Particles
           className="absolute inset-0 z-0 min-h-screen"

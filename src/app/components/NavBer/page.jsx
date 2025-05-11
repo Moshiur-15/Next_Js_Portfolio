@@ -23,9 +23,9 @@ const NavBer = () => {
   ];
 
   return (
-    <section className="container mx-auto pb-2">
-      <header className="backdrop-blur bg-gray-50/10 rounded-full shadow-md">
-        <div className="flex justify-between items-center mt-2 px-4 py-2 md:py-3">
+    <section className="container mx-auto">
+      <header className="backdrop-blur bg-gray-50/10 rounded-full shadow-lg">
+        <div className="flex justify-between items-center px-4 py-2 md:py-3">
           {/* Logo */}
           <div className="flex items-center">
             <img
