@@ -18,24 +18,29 @@ import { FlipText } from "@/components/magicui/flip-text";
 export default function Contact() {
   const form = useRef();
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs
-      .sendForm("service_ahqyoua", "template_px0c2kk", form.current, {
-        publicKey: "3eOT6dB9zWU0c1M1F",
+      .sendForm("service_o751745", "template_21grsfp", form.current, {
+        publicKey: "Z2qfI6Xmrlgyd4bDo",
       })
       .then(
         (res) => {
           console.log("SUCCESS!", res.text);
           form.current.reset();
           setLoading(false);
+          setMessage(
+            "Your message has been sent successfully. Thank you for reaching out to me!"
+          );
         },
         (error) => {
           console.log("FAILED...", error.text);
           setLoading(false);
+          setMessage("Sorry, something went wrong. Please try again later.");
         }
       );
   };
@@ -68,7 +73,7 @@ export default function Contact() {
                 required
                 type="text"
                 id="fullName"
-                name="from_name"
+                name="user_name"
                 placeholder="Enter Your Name"
                 className="w-full px-4 py-3 bg-gray-200  placeholder-gray-400 border border-gray-600 focus:outline-none border-none"
               />
@@ -84,7 +89,7 @@ export default function Contact() {
               </label>
               <input
                 required
-                name="from_email"
+                name="user_email"
                 type="email"
                 id="email"
                 placeholder="Enter Your Email"
@@ -109,6 +114,12 @@ export default function Contact() {
                 className="w-full px-4 py-3 bg-gray-200  placeholder-gray-400 border border-gray-600 focus:outline-none border-none"
               ></textarea>
             </div>
+
+            {message && (
+              <p className="text-blue-500 mb-3">
+                {message}
+              </p>
+            )}
 
             {/* Submit Button */}
             <div className="mt-auto">
@@ -237,5 +248,3 @@ export default function Contact() {
     </div>
   );
 }
-
-// Service ID: service_o751745 p:Z2qfI6Xmrlgyd4bDo t:template_21grsfp
