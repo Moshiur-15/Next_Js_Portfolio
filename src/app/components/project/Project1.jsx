@@ -12,7 +12,7 @@ export default function Project1() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="overflow-hidden shadow-md flex flex-col h-full">
+    <div className="overflow-hidden shadow-lg hover:shadow-none duration-500 shadow-slate-400/50 hover:border border-gray-200 flex flex-col h-full">
       <div className="relative">
         <Image
           src="/medicamp.png"

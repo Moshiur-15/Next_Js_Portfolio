@@ -12,11 +12,11 @@ export default function Project2() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="overflow-hidden shadow-md flex flex-col h-full">
+    <div className="overflow-hidden shadow-lg hover:shadow-none duration-500 shadow-slate-400/50 hover:border border-gray-200 flex flex-col h-full">
       <div className="relative">
         <Image
           src="/nextera.png"
-          alt="NextEra Blog"
+          alt="Medi Camp"
           className="h-[330px] object-cover"
           layout="responsive"
           width={500}

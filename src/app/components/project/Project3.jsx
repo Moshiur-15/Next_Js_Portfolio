@@ -12,12 +12,12 @@ export default function Project3() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className="overflow-hidden shadow-md flex flex-col h-full">
+    <div className="overflow-hidden shadow-lg hover:shadow-none duration-500 shadow-slate-400/50 hover:border border-gray-200 flex flex-col h-full">
       <div className="relative">
         <Image
           src="/gamezone.png"
-          alt="Game Zone"
-          className="h-[230px] object-cover"
+          alt="Medi Camp"
+          className="h-[330px] object-cover"
           layout="responsive"
           width={500}
           height={230}

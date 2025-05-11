@@ -42,7 +42,7 @@ export default function Contact() {
 
   return (
     <div className="bg-gray-100 pb-32 lg:pb-20 px-4">
-      <div className="sm:py-10 container mx-auto" id="contact">
+      <div className="py-8 sm:py-10 container mx-auto" id="contact">
         <h2 className="text-3xl font-bold uppercase text-gray-700 text-center mb-2">
           <FlipText>Contact Me</FlipText>
         </h2>
