@@ -3,12 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Project1() {
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
-
-  // Function to open the modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
-
-  // Function to close the modal
   const closeModal = () => setIsModalOpen(false);
 
   return (
