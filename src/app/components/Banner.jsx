@@ -3,7 +3,6 @@ import { RetroGrid } from "@/components/magicui/retro-grid";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Banner() {
-
   return (
     <section
       id="home"
@@ -54,7 +53,7 @@ export default function Banner() {
 
           {/* Resume Button */}
           <a
-            href="https://drive.google.com/file/d/11AQ6lcRpU9M5D46XoRKyBMvid343MBUV/view?usp=sharing"
+            href="https://drive.google.com/file/d/1x1vF0DVvh86hwBhrLC7vWfpv2SnapKa4/view?usp=sharing"
             target="_blank"
             className="inline-block bg-blue-500 hover:bg-blue-700 text-white font-semibold py-3 px-6 uppercase transition duration-300"
           >

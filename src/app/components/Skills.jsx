@@ -29,7 +29,7 @@ const Skills = () => {
           <div className="bg-white p-6 shadow-lg hover:shadow-none duration-500 shadow-slate-400/50">
             <h2 className="text-xl font-bold text-gray-700 mb-3">Backend</h2>
             <ul className="space-y-2 text-gray-700">
-              {["MongoDB (Intermediate)", "Node.js (Intermediate)", "Express.js (Intermediate)"].map((skill, index) => (
+              {["MongoDB (Intermediate)", "Node.js (Intermediate)", "Express.js (Intermediate)", "Mongoose.js (Intermediate)"].map((skill, index) => (
                 <li key={index} className="flex items-center gap-2">
                   <div className="w-5.5 h-5.5 flex justify-center items-center bg-gray-200 rounded-full">
                     <div className="w-2.5 h-2.5 bg-black rounded-full"></div>
@@ -44,7 +44,7 @@ const Skills = () => {
           <div className="bg-white p-6 shadow-lg hover:shadow-none duration-500 shadow-slate-400/50">
             <h2 className="text-xl font-bold text-gray-700 mb-3">Others</h2>
             <ul className="space-y-2 text-gray-700">
-              {["Firebase", "Git & GitHub"].map((skill, index) => (
+              {["Firebase", "Git & GitHub", "NextAuth", 'bcryptjs'].map((skill, index) => (
                 <li key={index} className="flex items-center gap-2">
                   <div className="w-5.5 h-5.5 flex justify-center items-center bg-gray-200 rounded-full">
                     <div className="w-2.5 h-2.5 bg-black rounded-full"></div>

@@ -23,7 +23,7 @@ export default function ParticlesPage() {
   }, [resolvedTheme]);
 
   return (
-    <div className="relative bg-slate-100">
+    <div className="relative bg-gradient-to-r from-slate-100 to-white">
       <div className="sticky z-50 top-3">
         <NavBer />
       </div>
