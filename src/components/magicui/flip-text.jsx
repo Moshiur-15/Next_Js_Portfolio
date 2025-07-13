@@ -36,7 +36,7 @@ export function FlipText({
   return (
     <div
       ref={ref}
-      className="flex justify-center flex-wrap text-slate-950/70"
+      className="flex justify-center flex-wrap text-white"
     >
       <AnimatePresence mode="wait">
         {visible &&

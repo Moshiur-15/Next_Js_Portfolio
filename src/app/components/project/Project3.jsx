@@ -52,7 +52,7 @@ export default function Project3() {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 backdrop-blur-sm bg-gray-950 bg-blur bg-opacity-10 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-4xl w-full relative max-h-screen overflow-y-auto">
+          <div className="bg-white p-6 max-w-4xl w-full relative max-h-screen overflow-y-auto">
             {/* Close Icon */}
             <button
               onClick={closeModal}
@@ -67,11 +67,11 @@ export default function Project3() {
             </p>
 
             {/* Image */}
-            <div className="w-full overflow-hidden rounded-lg shadow-lg mb-8">
+            <div className="w-full overflow-hidden h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] mb-8">
               <img
                 src="/gamezone.png"
                 alt="Game Zone Screenshot"
-                className="w-full min-h-[350px] rounded-lg"
+                className="w-full h-full border"
               />
             </div>
 

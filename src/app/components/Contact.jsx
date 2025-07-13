@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
@@ -14,6 +13,7 @@ import {
   FaLocationDot,
 } from "react-icons/fa6";
 import { FlipText } from "@/components/magicui/flip-text";
+import { MagicCard } from "@/components/magicui/magic-card";
 
 export default function Contact() {
   const form = useRef();
@@ -55,13 +55,17 @@ export default function Contact() {
 
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 items-start">
           {/* Contact Form */}
+
           <form
             ref={form}
             onSubmit={sendEmail}
             className="flex-grow flex flex-col bg-white p-5 sm:p-10 shadow w-full"
           >
             <div className="mb-5">
-              <label htmlFor="fullName" className="block text-sm font-medium text-gray-600 mb-2">
+              <label
+                htmlFor="fullName"
+                className="block text-sm font-medium text-gray-600 mb-2"
+              >
                 FULL NAME <span className="text-red-500">*</span>
               </label>
               <input
@@ -70,12 +74,15 @@ export default function Contact() {
                 id="fullName"
                 name="user_name"
                 placeholder="Enter Your Name"
-                className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-gray-200 border border-gray-600 focus:outline-none"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-gray-200 focus:outline-none"
               />
             </div>
 
             <div className="mb-5">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-600 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-600 mb-2"
+              >
                 EMAIL ADDRESS <span className="text-red-500">*</span>
               </label>
               <input
@@ -84,12 +91,15 @@ export default function Contact() {
                 type="email"
                 id="email"
                 placeholder="Enter Your Email"
-                className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-gray-200 border border-gray-600 focus:outline-none"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-gray-200 focus:outline-none"
               />
             </div>
 
             <div className="mb-5">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-600 mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-600 mb-2"
+              >
                 MESSAGE <span className="text-red-500">*</span>
               </label>
               <textarea
@@ -98,13 +108,11 @@ export default function Contact() {
                 id="message"
                 rows="5"
                 placeholder="Write your message here..."
-                className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-gray-200 border border-gray-600 focus:outline-none"
+                className="w-full px-3 py-2 sm:px-4 sm:py-3 bg-gray-200 focus:outline-none resize-none"
               ></textarea>
             </div>
 
-            {message && (
-              <p className="text-blue-500 mb-3">{message}</p>
-            )}
+            {message && <p className="text-blue-500 mb-3">{message}</p>}
 
             <div>
               <button
@@ -137,7 +145,9 @@ export default function Contact() {
                 <FaEnvelope className="text-red-500 text-xl" />
                 <div>
                   <h4 className="font-bold">Email</h4>
-                  <p className="text-gray-600 break-all">masiurislam28@gmail.com</p>
+                  <p className="text-gray-600 break-all">
+                    masiurislam28@gmail.com
+                  </p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
@@ -159,7 +169,9 @@ export default function Contact() {
                 <FaLocationDot className="text-yellow-500 text-xl" />
                 <div>
                   <h4 className="font-bold">Location</h4>
-                  <p className="text-gray-600">Patuakhali, Barisal, Bangladesh</p>
+                  <p className="text-gray-600">
+                    Patuakhali, Barisal, Bangladesh
+                  </p>
                 </div>
               </li>
             </ul>
@@ -207,3 +219,4 @@ export default function Contact() {
     </div>
   );
 }
+

@@ -3,6 +3,7 @@ import Project1 from "./Project1";
 import Project3 from "./Project3";
 import Project2 from "./Project2";
 import { FlipText } from "@/components/magicui/flip-text";
+import Project4 from "./Project4";
 
 const Project = () => {
   return (
@@ -10,10 +11,11 @@ const Project = () => {
       <h2 className="text-3xl font-bold uppercase lg:scale-y-125 text-gray-700 text-center mb-5 lg:mb-15">
         <FlipText>feature Projects</FlipText>
       </h2>
-      <section className="grid md:grid-cols-2 lg:grid-cols-3  gap-6">
+      <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Project4 />
         <Project1 />
         <Project2 />
-        <Project3/>
+        <Project3 />
       </section>
     </div>
   );
