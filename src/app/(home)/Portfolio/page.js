@@ -172,7 +172,7 @@ const UniquePortfolio = () => {
       {isScrolled && (
         <button
           onClick={scrollToTop}
-          className="fixed cursor-pointer bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-300 z-50"
+          className="fixed cursor-pointer bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-300 z-50"
         >
           <ArrowUp className="w-5 h-5" />
         </button>

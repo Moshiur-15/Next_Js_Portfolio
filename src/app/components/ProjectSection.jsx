@@ -14,7 +14,7 @@ const ProjectSection = ({ projects }) => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+              className="group relative bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
             >
               {project.featured && (
                 <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-medium">

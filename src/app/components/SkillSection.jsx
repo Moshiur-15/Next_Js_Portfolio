@@ -14,10 +14,10 @@ const SkillSection = ({skills}) => {
           {Object.entries(skills).map(([category, skillList]) => (
             <div
               key={category}
-              className="bg-gray-800/50 rounded-2xl p-8 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+              className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
             >
               <div className="flex items-center mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-3">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
                   {category === "frontend" && <Code className="w-5 h-5" />}
                   {category === "backend" && <Database className="w-5 h-5" />}
                   {category === "others" && <Globe className="w-5 h-5" />}

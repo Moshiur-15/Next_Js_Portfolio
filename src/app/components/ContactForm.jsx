@@ -55,7 +55,7 @@ const ContactForm = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-gray-800/50 rounded-2xl p-8 backdrop-blur-sm border border-gray-700/50">
+            <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700/50">
               <h3 className="text-2xl font-semibold mb-6">Send Message</h3>
               <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -63,13 +63,13 @@ const ContactForm = () => {
                     type="text"
                     placeholder="Your Name"
                     name="user_name"
-                    className="w-full px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 focus:border-blue-500 focus:outline-none transition-colors"
                   />
                   <input
                     name="user_email"
                     type="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none transition-colors"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 focus:border-blue-500 focus:outline-none transition-colors"
                   />
                 </div>
 
@@ -77,12 +77,12 @@ const ContactForm = () => {
                   name="message"
                   placeholder="Your Message"
                   rows="6"
-                  className="w-full px-4 py-3 bg-gray-700/50 rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 focus:border-blue-500 focus:outline-none transition-colors resize-none"
                 />
                 {message && <p className="text-blue-500 mb-3">{message}</p>}
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg text-white font-medium  transition-all duration-300 flex items-center justify-center"
                 >
                   {loading ? (
                     <AiOutlineLoading3Quarters className="animate-spin mx-auto text-2xl" />
@@ -98,13 +98,13 @@ const ContactForm = () => {
 
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="bg-gray-800/50 rounded-2xl p-8 backdrop-blur-sm border border-gray-700/50">
+              <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700/50">
                 <h3 className="text-2xl font-semibold mb-6">
                   Contact Information
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
@@ -113,7 +113,7 @@ const ContactForm = () => {
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-500 rounded-lg flex items-center justify-center mr-4">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
@@ -122,7 +122,7 @@ const ContactForm = () => {
                     </div>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
@@ -134,7 +134,7 @@ const ContactForm = () => {
               </div>
 
               {/* Social Links */}
-              <div className="bg-gray-800/50 rounded-2xl p-8 backdrop-blur-sm border border-gray-700/50">
+              <div className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700/50">
                 <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
                 <div className="flex space-x-4">
                   {[

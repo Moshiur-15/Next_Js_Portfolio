@@ -10,7 +10,6 @@ import {
   FaProjectDiagram,
   FaEnvelope,
 } from "react-icons/fa";
-import { BorderBeam } from "@/components/magicui/border-beam";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,6 +41,20 @@ const Nav = () => {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  // Prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    // Clean up when component unmounts
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
 
   return (
     <div className="relative">
@@ -125,7 +138,7 @@ const Nav = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden fixed inset-0 bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center space-y-6 text-xl font-medium text-white z-40">
+          <div className="md:hidden inset-0 min-h-screen bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center space-y-6 text-xl font-medium text-white z-40">
             {navLinks.map((link) => (
               <a
                 key={link.name}
