@@ -1,9 +1,9 @@
-import { Eye, Github, Star } from "lucide-react";
+import { Code, Eye, Github, Star } from "lucide-react";
 import React from "react";
 
 const ProjectSection = ({ projects }) => {
   return (
-    <section id="project" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="project" className="py-6 sm:py-10 lg:py-16 xl:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
@@ -14,7 +14,7 @@ const ProjectSection = ({ projects }) => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+              className="group relative bg-gray-800/50 rounded-sm overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
             >
               {project.featured && (
                 <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-3 py-1 rounded-full text-sm font-medium">
@@ -25,20 +25,20 @@ const ProjectSection = ({ projects }) => {
 
               <div className="relative overflow-hidden">
                 <div className="w-full h-64 bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                  {/* <Code className="w-16 h-16 text-gray-500" /> */}
                   <img
                     src={project.image}
                     className="w-full h-full object-cover"
                     alt="Moshiur Islam"
                   />
                 </div>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex gap-2">
                     <a
                       href={project.live}
                       target="_blank"
-                      className="flex items-center px-4 py-2 bg-blue-500 rounded-lg text-white text-sm font-medium hover:bg-blue-600 transition-colors"
+                      className="flex items-center px-4 py-1.5 bg-blue-600/70 rounded text-white text-sm font-medium hover:bg-blue-600 transition-colors duration-300 active:scale-95"
                     >
                       <Eye className="w-4 h-4 mr-1" />
                       Live
@@ -46,7 +46,7 @@ const ProjectSection = ({ projects }) => {
                     <a
                       href={project.github}
                       target="_blank"
-                      className="flex items-center px-4 py-2 bg-gray-700 rounded-lg text-white text-sm font-medium hover:bg-gray-600 transition-colors"
+                      className="flex items-center px-4 py-1.5 bg-gray-700 rounded text-white text-sm font-medium hover:bg-gray-600 transition-colors duration-300 active:scale-95"
                     >
                       <Github className="w-4 h-4 mr-1" />
                       Code
@@ -67,7 +67,7 @@ const ProjectSection = ({ projects }) => {
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 hover:bg-blue-500 bg-gray-700 rounded-full text-sm text-gray-300"
+                      className="px-3 py-1 hover:bg-blue-500 duration-200 bg-gray-700 rounded-full text-sm text-gray-300"
                     >
                       {tag}
                     </span>

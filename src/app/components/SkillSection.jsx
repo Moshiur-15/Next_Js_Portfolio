@@ -3,7 +3,7 @@ import React from "react";
 
 const SkillSection = ({skills}) => {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-6 sm:py-10 lg:py-16 xl:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">My Skills</h2>
@@ -14,7 +14,7 @@ const SkillSection = ({skills}) => {
           {Object.entries(skills).map(([category, skillList]) => (
             <div
               key={category}
-              className="bg-gray-800/50 rounded-lg p-8 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+              className="bg-gray-800/50 rounded-sm p-8 backdrop-blur-sm border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
             >
               <div className="flex items-center mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">

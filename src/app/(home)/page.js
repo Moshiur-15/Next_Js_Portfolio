@@ -28,7 +28,7 @@ import SkillSection from "../components/SkillSection";
 import ProjectSection from "../components/ProjectSection";
 import ContactForm from "../components/ContactForm";
 
-const UniquePortfolio = () => {
+const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [isScrolled, setIsScrolled] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -67,15 +67,13 @@ const UniquePortfolio = () => {
       id: 1,
       title: "HouseLease Platform",
       description:
-        "A full-stack property rental platform with user roles, authentication, and Stripe payments.",
+        "HouseLease is a comprehensive full-stack property rental platform that allows users to list, search, and rent properties seamlessly. The platform includes robust role-based access for admins and renters, secure authentication with NextAuth.js, and payment integration through Stripe. It's designed with a clean, responsive UI and supports advanced features like property management, user dashboards, and secure password hashing using Bcrypt.",
       image: "https://i.ibb.co/FZqBDrK/Screenshot-2025-07-13-101357.png",
       tags: [
         "Next.js",
         "Tailwind CSS",
         "Shadcn/UI",
-        "Magic UI",
         "Node.js",
-        "Express.js",
         "MongoDB",
         "Mongoose",
         "NextAuth.js",
@@ -90,7 +88,7 @@ const UniquePortfolio = () => {
       id: 2,
       title: "Medi Camp Management System",
       description:
-        "A system for managing medical camp schedules, volunteers, and registration.",
+        "This platform simplifies the management of medical camps by handling volunteer registration, scheduling, and participant coordination. Built with React and Express, it features a modern UI, secure data flow, form validation with React Hook Form, and real-time database updates via Firebase. It also includes payment functionality through Stripe and insightful visualizations using Recharts.",
       image: "/medicamp.png",
       tags: [
         "React.js",
@@ -99,7 +97,7 @@ const UniquePortfolio = () => {
         "flowbite-react",
         "Node.js",
         "Express.js",
-        "Firebase Authentication",
+        "Firebase",
         "Stripe",
         "Recharts",
       ],
@@ -111,7 +109,7 @@ const UniquePortfolio = () => {
       id: 3,
       title: "NextEra Blog",
       description:
-        "A modern blogging platform built with rich text editing, markdown support, and smooth UI.",
+        "NextEra is a sleek and modern blogging platform that offers rich text editing, markdown support, blog listing, and smooth user experience. It allows users to read, write, and manage blog posts with an intuitive interface. With Framer Motion animations and advanced tables via ka-table, this platform focuses on both aesthetics and performance for bloggers.",
       image: "/blog.png",
       tags: [
         "React.js",
@@ -131,7 +129,7 @@ const UniquePortfolio = () => {
       id: 4,
       title: "GameZone - Game Review App",
       description:
-        "A game review app to explore games, view ratings, write reviews, and manage wishlists.",
+        "GameZone is an interactive platform where users can discover popular games, rate them, write detailed reviews, and manage personal wishlists. Built with React and Express, the app delivers a seamless user experience with organized game listings, rating functionality, and user-specific data handling. It offers a clean, responsive layout and an intuitive review system tailored for gamers.",
       image: "/gamezone.png",
       tags: [
         "React.js",
@@ -139,7 +137,7 @@ const UniquePortfolio = () => {
         "daisyUI",
         "Node.js",
         "Express.js",
-        "MongoDB Atlas",
+        "MongoDB",
       ],
       github: "https://github.com/Moshiur-15/game-zone",
       live: "https://gamezone-me.netlify.app/",
@@ -152,9 +150,8 @@ const UniquePortfolio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-gray-900 text-white overflow-hidden ">
       <Nav />
-
       {/* Hero Section */}
       <HeroSection />
       {/* about */}
@@ -172,7 +169,7 @@ const UniquePortfolio = () => {
       {isScrolled && (
         <button
           onClick={scrollToTop}
-          className="fixed cursor-pointer bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-300 z-50"
+          className="fixed cursor-pointer bottom-8 right-8 w-12 h-12 bg-blue-600/70 hover:bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg active:scale-95 transition-all duration-200 z-50"
         >
           <ArrowUp className="w-5 h-5" />
         </button>
@@ -181,4 +178,4 @@ const UniquePortfolio = () => {
   );
 };
 
-export default UniquePortfolio;
+export default Portfolio;

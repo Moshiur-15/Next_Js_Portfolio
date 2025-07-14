@@ -1,8 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const defaultVariants = {
   hidden: { rotateX: -90, opacity: 0 },
@@ -21,22 +20,13 @@ export function FlipText({
   const MotionComponent = motion.create(Component);
   const characters = React.Children.toArray(children).join("").split("");
 
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.5 }); // 👈 Triggers at 50% visibility
   const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    if (isInView) {
-      setVisible(true);
-    } else {
-      setVisible(false); // Reset if you want re-triggering
-    }
-  }, [isInView]);
 
   return (
     <div
-      ref={ref}
-      className="flex justify-center flex-wrap text-white"
+      onMouseEnter={() => setVisible(true)}
+      onMouseLeave={() => setVisible(false)}
+      className="flex justify-center flex-wrap text-white cursor-pointer"
     >
       <AnimatePresence mode="wait">
         {visible &&

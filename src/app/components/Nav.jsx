@@ -86,7 +86,7 @@ const Nav = () => {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-0">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center">
@@ -103,7 +103,9 @@ const Nav = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="flex items-center gap-2 text-gray-300 hover:text-white hover:scale-110 transition duration-300"
+                  className="relative flex items-center gap-2 text-gray-300 hover:text-white hover:scale-110 transition duration-300 
+                 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] 
+                 after:bg-gradient-to-r after:from-blue-400 after:to-purple-400 after:transition-all after:duration-300"
                 >
                   {link.icon}
                   <span>{link.name}</span>
@@ -117,7 +119,7 @@ const Nav = () => {
                 href="https://drive.google.com/file/d/1qtjoVColjfNVBpPcskDO6LOCS7ydMILb/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-4 py-2 flex items-center transition"
+                className="bg-blue-600/70 hover:bg-blue-600 rounded text-white font-bold px-4 py-2 flex items-center transition active:scale-95 duration-200"
               >
                 <FaFolderOpen className="mr-2" />
                 RESUME
@@ -143,8 +145,9 @@ const Nav = () => {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 hover:text-blue-400 transition duration-200"
+                className="relative flex items-center gap-2 text-gray-300 hover:text-white hover:scale-110 transition duration-300 
+                 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 hover:after:w-full after:h-[2px] 
+                 after:bg-gradient-to-r after:from-blue-400 after:to-purple-400 after:transition-all after:duration-300"
               >
                 {link.icon}
                 <span>{link.name}</span>

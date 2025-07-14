@@ -13,14 +13,14 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* Left side - Text content */}
         <div className="text-center lg:text-left">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-blue-700/70 rounded-full text-sm font-medium text-blue-300 mb-6">
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-700/20 to-blue-600/70 rounded-full text-sm font-medium text-blue-300 mb-6">
             <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
             Available for work
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
             <span className="block text-white">Hi, I'm</span>
-            <span className="block bg-gradient-to-r from-gray-400 via-blue-600 to-blue-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-slate-400 via-blue-600 to-blue-800 bg-clip-text text-transparent">
               Moshiur Islam
             </span>
           </h1>
@@ -32,7 +32,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="group relative px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-500 rounded-full text-white font-medium overflow-hidden transition-all duration-300 hover:scale-105">
+            <button className="group relative px-8 py-3 bg-blue-600/80 hover:bg-blue-600 duration-200 rounded-full text-white font-medium overflow-hidden transition-all active:scale-95">
               <a
                 href="https://drive.google.com/file/d/1qtjoVColjfNVBpPcskDO6LOCS7ydMILb/view?usp=sharing"
                 target="_blank"
@@ -43,15 +43,19 @@ const HeroSection = () => {
               </a>
             </button>
 
-            <button className="group px-8 py-3 border-2 border-gray-600 rounded-full text-gray-300 font-medium hover:border-blue-400 hover:text-blue-400 transition-all duration-300">
+            <button className="group relative overflow-hidden px-8 py-3 border-2 border-gray-200 rounded-full text-gray-200 font-medium transition-all duration-300 active:scale-95 hover:border-transparent">
+              {/* Background animation layer */}
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out"></span>
+
+              {/* Button content */}
               <a
                 href="mailto:masiurislam28@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center"
+                className="relative flex items-center justify-center z-10 group-hover:text-white transition-colors duration-300"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Get in Touch
+                GET IN TOUCH
               </a>
             </button>
           </div>
