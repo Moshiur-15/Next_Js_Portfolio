@@ -68,7 +68,7 @@ const Portfolio = () => {
       title: "HouseLease Platform",
       description:
         "HouseLease is a comprehensive full-stack property rental platform that allows users to list, search, and rent properties seamlessly. The platform includes robust role-based access for admins and renters, secure authentication with NextAuth.js, and payment integration through Stripe. It's designed with a clean, responsive UI and supports advanced features like property management, user dashboards, and secure password hashing using Bcrypt.",
-      image: "https://i.ibb.co/FZqBDrK/Screenshot-2025-07-13-101357.png",
+      image: "https://i.ibb.co/zWWz60KP/Screenshot-2025-07-26-091523.png",
       tags: [
         "Next.js",
         "Tailwind CSS",

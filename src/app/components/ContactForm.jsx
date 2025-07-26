@@ -62,7 +62,7 @@ const ContactForm = () => {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-gray-800/50 rounded-sm p-8 backdrop-blur-sm border border-gray-700/50">
+            <div className="bg-gray-800/50 hover:border-blue-500/50 transition-all duration-300 rounded-sm p-8 backdrop-blur-sm border border-gray-700/50">
               <h3 className="text-2xl font-semibold mb-6">Send Message</h3>
               <form ref={form} onSubmit={sendEmail} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
@@ -124,7 +124,7 @@ const ContactForm = () => {
 
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="bg-gray-800/50 rounded-sm p-8 backdrop-blur-sm border border-gray-700/50">
+              <div className="hover:border-blue-500/50 transition-all duration-300 bg-gray-800/50 rounded-sm p-8 backdrop-blur-sm border border-gray-700/50">
                 <h3 className="text-2xl font-semibold mb-6">
                   Contact Information
                 </h3>
@@ -135,7 +135,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <p className="text-gray-400">Email</p>
-                      <p className="text-white">masiurislam@email.com</p>
+                      <p className="text-white">masiurislam28@email.com</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -162,7 +162,7 @@ const ContactForm = () => {
               </div>
 
               {/* Social Links */}
-              <div className="bg-gray-800/50 rounded-sm p-8 backdrop-blur-sm border border-gray-700/50">
+              <div className="hover:border-blue-500/50 transition-all duration-300 bg-gray-800/50 rounded-sm p-8 backdrop-blur-sm border border-gray-700/50">
                 <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
                 <div className="flex space-x-4">
                   {[
